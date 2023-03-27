@@ -6,6 +6,7 @@ import { Modal } from "../../components/Modal";
 import { RestartModal } from "../../components/RestartModal";
 import * as S from "./style"
 
+
 export function Board (){
   const [openRestart,setOpenRestart]=useState(false)
   function clickRestart(){
