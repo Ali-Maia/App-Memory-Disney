@@ -32,6 +32,6 @@ export const Avatar = styled.Image<Avatar>`
   ${({ visible, select }) =>
     (visible || select) &&
     css`
-      display: block;
+    
     `}
 `;
