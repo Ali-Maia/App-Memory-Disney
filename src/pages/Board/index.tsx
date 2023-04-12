@@ -3,16 +3,17 @@ import { Button } from "../../components/Button";
 import Label from "../../components/Label";
 import MemoryCard from "../../components/MemoryCard";
 import { Modal } from "../../components/Modal";
-import { RestartModal } from "../../components/RestartModal";
+import  NewModal  from "../../components/NewModal";
 import * as S from "./style"
 
-
 export function Board (){
-  const [openRestart,setOpenRestart]=useState(false)
+  const [openModal,setOpenModal]=useState(false)
   function clickRestart(){
-    //Responsavel por abrir o modal de restart
-    //Mudar o estado da variavel open
-    setOpenRestart(true)
+    //Responsavel por atualizar o tempo e zerar as quantidades de movimento
+  }
+  function clickNew(){
+    //Responsável 
+    setOpenModal(true)
   }
   return(
     <S.Container>
@@ -21,10 +22,11 @@ export function Board (){
       <S.ButtonContainer>
           <Button text="Reiniciar" fontSize={16} iconName="iconRestart" onPress={clickRestart}
           />
-          <Button iconName="iconNew" text="Novo" fontSize={16} />
+          <Button iconName="iconNew" text="Novo" fontSize={16} onPress={()=>clickNew()}
+          />
         </S.ButtonContainer>
         <MemoryCard princessName="bela" select={true} visible={true} />
-        {openRestart && (<RestartModal open={openRestart}/>)}
+        <NewModal open={openModal} />
         <S.ButtonContainer>
           <Button text="Tempo"/>
           <Button text="Movimentos"/>

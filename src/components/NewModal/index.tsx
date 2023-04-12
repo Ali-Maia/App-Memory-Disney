@@ -4,11 +4,12 @@ import { Modal } from "../Modal";
 
 type openProps = {
   open: boolean
+  onClosed: ()=> void
 }
 
-export function RestartModal({open}:openProps) {
+export default function NewModal({open,onClosed}:openProps) {
   return(
-    <Modal open={open}>
+    <Modal open={open} onClosed={onClosed}>
       <Label>Teste</Label>
     </Modal>
   )

@@ -21,7 +21,7 @@ export function Button({ iconName, text, fontSize, ...props }: ButtonProps) {
 
   return (
     <S.Button {...props} >
-      {false && (<Icon iconName={iconName} size={fontSize}/>)}
+      {/* {false && (<Icon iconName={iconName} size={fontSize}/>)} */}
       <Label fontSize={fontSize}>{text}</Label>
     </S.Button>
   );
